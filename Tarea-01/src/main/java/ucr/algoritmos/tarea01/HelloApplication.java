@@ -10,10 +10,15 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        // Cargamos la nueva vista del Multi-Conversor
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("multi-conversor-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 500, 450);
+        stage.setTitle("Multi-Conversor de Grupo");
         stage.setScene(scene);
         stage.show();
+    }
+
+    public static void main(String[] args) {
+        launch();
     }
 }
